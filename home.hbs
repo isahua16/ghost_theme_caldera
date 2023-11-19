@@ -3,14 +3,17 @@
 
 <div class="gh-page">
     <div class="section gh-container">
-        <img id="team_photo" src="{{asset "images/team.webp"}}" alt="Photo of the Caldera Interactive team">
-        <div id="welcome_text">
-            <h2>Hello, it's nice to meet you!</h2>
-            <p>We are Caldera Interactive, an indie game studio that has ethical, sustainable, and non-exploitative game
-            development at
-            its core. Support us by signing up to our upcoming playtests!</p>
-            <div id="subscribe_component">          
-                <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-button-color="#00b8f1" data-button-text-color="#FFFFFF" data-site="{{@site.url}}" async></script> 
+        <div class="grid-container">
+            <img class="gh-team-photo" src="{{asset "images/team.webp"}}" alt="Photo of the Caldera Interactive team">
+            
+            <div class="grid-inner-container">
+                <h2>Hello, it's nice to meet you!</h2>
+                <p class="intro_text">We are Caldera Interactive, an indie game studio that has ethical, sustainable, and non-exploitative game
+                development at
+                its core. Support us by signing up to our upcoming playtests!</p>
+                <div id="subscribe_component">          
+                    <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-button-color="#00b8f1" data-button-text-color="#FFFFFF" data-site="{{@site.url}}" async></script> 
+                </div>
             </div>
         </div>
     </div>
@@ -18,19 +21,21 @@
     <div class="section gh-container">
         <h2>The Rabbit Haul</h2>
         <p>Find out about our game</p>
-        <article class="gh-game-card-container">
-        <img class="gh-game-card-image" src="{{asset "images/concept.jpg"}}" alt="Concept art for the game The Rabbit Haul">
-        <p class="gh-game-card-desc">The Rabbit Haul is a single-player tower defence farming game with action-roguelite elements
-            where you play as
-            a
-            friendly rabbit gardener protecting its haul of fruits and veggies from waves of hungry raccoons known as the
-            Trash
-            Panda Posse. With an array of unique weapons, upgrade paths, powerful towers and crops to unlock, the game
-            offers
-            countless play styles to master.</p>
-        <button id="Wishlist_button" class="gh-button gh-button-large gh-button-primary">Wishlist on Steam            
-        </button>
-        </article>
+        <div class="spacer-container">
+            <article class="gh-game-card-container">
+                <img class="gh-game-card-image" src="{{asset "images/concept.jpg"}}" alt="Concept art for the game The Rabbit Haul">
+                <p class="gh-game-card-desc">The Rabbit Haul is a single-player tower defence farming game with action-roguelite elements
+                    where you play as
+                    a
+                    friendly rabbit gardener protecting its haul of fruits and veggies from waves of hungry raccoons known as the
+                    Trash
+                    Panda Posse. With an array of unique weapons, upgrade paths, powerful towers and crops to unlock, the game
+                    offers
+                    countless play styles to master.</p>
+                <button id="wishlist-button" class="gh-button gh-button-large gh-button-primary">Wishlist on Steam            
+                </button>
+            </article>
+        </div>
     </div>
     <div class="section gh-container">
             <h2>Blog</h2>
@@ -44,8 +49,8 @@
         {{/foreach}}
         {{/get}}
         </div>
-        <div class="gh-button-container ">
-            <button id="all_posts_button" class="gh-button gh-button-large gh-button-primary">See all posts -></button>
+        <div class="gh-button-container">
+            <button id="all_posts_button" class="gh-button gh-button-large">See all posts -></button>
         </div>
     </div>
     <div class="section gh-container">

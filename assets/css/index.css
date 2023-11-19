@@ -56,7 +56,8 @@ html,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 4.8vmin 4vmin;
-    padding: 8vmin 0;
+    padding-top: 8vmin;
+    padding-bottom: 50px;
 }
 
 /* .gh-postfeed > *:first-child {
@@ -142,6 +143,7 @@ html,
     font-weight: 500;
     box-shadow: 0 -1px 0 0 inset currentColor;
     opacity: 0.75;
+    color: var(--color-primary);
 }
 
 
@@ -264,29 +266,71 @@ html,
 }
 
 .section {
+    margin-bottom: 100px;
+}
+
+.grid-container {
     margin-top: 50px;
-    margin-bottom: 50px;
+    display: grid;
+    row-gap: 50px;
+    place-items: center;
+}
+
+.gh-team-photo {
+    width:90%;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.grid-inner-container {
+    max-width: 600px;
+    display: grid;
+    gap: 24px;
+    padding: 0 30px;
+}
+
+.intro_text {
+    line-height: 2.8rem;
+}
+
+#subscribe_component {
+    width:90%;
+}
+
+.spacer-container {
+    margin: 6vmin 0;
 }
 
 .gh-game-card-container {
     display:grid;
     place-items: center;
-    margin: 8vmin 0;
+    margin: 0 auto;
     border: 1px solid var(--color-border);
     padding: 30px;
+    max-width: 1000px;
+    justify-content: center;
+    gap:24px;
+    border-radius: var(--radius);
 }
 
-#wishlist_button {
+.gh-game-card-desc {
+    line-height: 2.8rem;
+    padding: 0 10px;
+}
+
+#wishlist-button {
     width: min-content;
+}
+
+.gh-card {
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    border-radius: var(--radius);
 }
 
 .gh-button-container {
     display: grid;
     place-items: center;
-}
-
-#all_posts_button {
-    margin: 30px 0;
 }
 
 .gh-team-container {
@@ -327,10 +371,20 @@ html,
     }
 }
 
-@media (min-width: 796px) {
-    #all_posts_button {
-        margin: 0 0;
+@media (min-width: 900px) {
+
+    .grid-container {
+    grid-template-columns: 1fr 1fr;
+    }   
+
+    .gh-team-photo {
+    order:2;
     }
+
+    .grid-inner-container {
+    max-width: 450px;
+}
+
 }
 
 @media (min-width: 1024px) {
