@@ -62,16 +62,13 @@
     </div>
 
     <footer class="gh-footer gh-canvas">
+        <p>Topics: <strong>{{tags separator=" &bull; " autolink="false"}}</strong></p>
 
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
-        </div>
-
-        {{#if comments}}
+        {{!-- {{#if comments}}
         <section class="gh-post-comments">
             {{comments}}
         </section>
-        {{/if}}
+        {{/if}} --}}
 
     </footer>
 
