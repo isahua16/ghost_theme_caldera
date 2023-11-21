@@ -11,9 +11,17 @@
                 <p class="intro_text">We are Caldera Interactive, an indie game studio that has ethical, sustainable, and non-exploitative game
                 development at
                 its core. Support us by signing up to our upcoming playtests!</p>
-                <div id="subscribe_component">          
-                    <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-button-color="#00b8f1" data-button-text-color="#FFFFFF" data-site="{{@site.url}}" async></script> 
+            <form class="gh-auth-form" data-members-form="signup">
+                <div class="gh-auth-box">
+                    <input aria-label="Email Address" class="gh-input" data-members-email type="email"
+                        placeholder="Email" required="true" autocomplete="false" autofocus />
+                    <button class="gh-button gh-button-primary gh-button-large" type="submit">
+                        <span class="gh-button-content">Sign up</span>
+                        <span class="gh-button-loader">{{> "icons/loader"}}</span>
+                    </button>
                 </div>
+                <p data-members-error><!-- error message will appear here --></p>
+            </form>
             </div>
         </div>
     </div>
@@ -57,17 +65,17 @@
         <h2>Our Team</h2>
         <div class="gh-team-container">
             <article class="gh-team-card">
-                <img class="gh-team-card-image" src="{{asset "images/isael.png"}}" alt="">
+                <img class="gh-team-card-image" src="{{asset "images/isael.png"}}" alt="Photo of Isael Huard">
                 <h3 class="gh-team-card-name">Isael Huard</h3>
                 <p class="gh-team-card-desc">Producer, Sound Designer</p>
             </article>
             <article class="gh-team-card">
-                <img class="gh-team-card-image" src="{{asset "images/mickael.png"}}" alt="">
+                <img class="gh-team-card-image" src="{{asset "images/mickael.png"}}" alt="Photo of Mickael Zerihoun">
                 <h3 class="gh-team-card-name">Mickael Zerihoun</h3>
                 <p class="gh-team-card-desc">Programmer</p>
             </article>
             <article class="gh-team-card">
-                <img class="gh-team-card-image" src="{{asset "images/titus.png"}}" alt="">
+                <img class="gh-team-card-image" src="{{asset "images/titus.png"}}" alt="Photo of Titus Lo">
                 <h3 class="gh-team-card-name">Titus Lo</h3>
                 <p class="gh-team-card-desc">Designer, Artist</p>
             </article>

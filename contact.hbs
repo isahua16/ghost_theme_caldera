@@ -5,11 +5,11 @@
             <h1>Contact us</h1>
             <p>We're excited to meet you!</p>
         </div>
-        <div class="contact-blog-container">
+        <div class="contact-container">
             <img
                 class="contact-image"
-                src="{{asset '/images/team.webp'}}"
-                alt=""
+                src="{{asset '/images/beaver.png'}}"
+                alt="Image of the beaver character in the game The Rabbit Haul"
             />
         </div>
 
@@ -33,12 +33,12 @@
                 rows="10"
                 class="gh-textarea"
                 name="message"
+                style="resize:none;"
                 required
             ></textarea>
-
-            <!-- your other form fields go here -->
             <button
-                class="send-button gh-button gh-button-large"
+                id="contact_button"
+                class="send-button gh-button-primary gh-button gh-button-large"
                 type="submit"
             >Send</button>
         </form>

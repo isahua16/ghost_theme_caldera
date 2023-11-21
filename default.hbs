@@ -43,25 +43,6 @@
                     <div class="gh-head-menu">
                         {{navigation}}
                     </div>
-                    {{! Removed Actions }}
-                    {{!-- <div class="gh-head-actions">
-                        <div class="gh-head-actions-list">
-                            {{search}}
-                            {{#if @site.members_enabled}}
-                                {{#if @member}}
-                                    <a
-                                        class="gh-button"
-                                        href="#/portal/account"
-                                    >Account</a>
-                                {{else}}
-                                    <a
-                                        class="gh-button"
-                                        href="{{@site.signup_url}}"
-                                    >Subscribe</a>
-                                {{/if}}
-                            {{/if}}
-                        </div>
-                    </div> --}}
                 </nav>
             </header>
 
@@ -78,30 +59,38 @@
                         {{navigation type="secondary"}}
                     </div>
                     <div class="gh-foot-socials">
-                        <a href=""><img
+                        <a
+                            target="_blank"
+                            href="https://www.tiktok.com/@calderainteractive"
+                        ><img
                                 class="social_icon"
-                                src="{{asset 'images/tiktok.png'}}"
-                                alt=""
+                                src="{{asset 'images/tiktok.svg'}}"
+                                alt="Tiktok logo"
                             /></a>
-                        <a href="">
+                        <a
+                            target="_blank"
+                            href="https://twitter.com/CalderaInteract"
+                        >
                             <img
                                 class="social_icon"
-                                src="{{asset 'images/twitter.png'}}"
-                                alt=""
+                                src="{{asset 'images/twitter.svg'}}"
+                                alt="Twitter Logo"
                             />
                         </a>
-                        <a href="">
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/calderainteractive/"
+                        >
                             <img
                                 class="social_icon"
-                                src="{{asset 'images/instagram.png'}}"
-                                alt=""
+                                src="{{asset 'images/instagram.svg'}}"
+                                alt="Instagram Logo"
                             />
                         </a>
                     </div>
                     <div class="gh-foot-meta">
                         <p>&copy 2023 Caldera Interactive Ltd.</p>
-
-                        <a href="">Privacy</a>
+                        <a href="#">Privacy</a>
                     </div>
                 </div>
             </footer>
