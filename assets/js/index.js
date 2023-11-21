@@ -16,7 +16,7 @@ function send_to_steam() {
 }
 
 function send_to_blog() {
-    window.location.href = "http://localhost:2371/blog/ ";
+    window.location.href = "http://ghost.calderainteracive.com/blog/ ";
 }
 
 if (document.querySelector(`#wishlist-button`)) {
