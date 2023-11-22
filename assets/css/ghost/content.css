@@ -23,6 +23,10 @@
     grid-column: main-start / main-end;
 }
 
+.gh-canvas > p > img {
+    margin: 0 auto;
+}
+
 .kg-width-wide,
 .kg-content-wide > div {
     grid-column: wide-start / wide-end;
