@@ -52,6 +52,10 @@ html,
     padding: 8vmin 0;
 }
 
+.gh-article-page {
+    padding-bottom: 8vmin;
+}
+
 .gh-postfeed {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
