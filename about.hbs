@@ -1,0 +1,47 @@
+{{!< default}}
+<div class="gh-page">
+    <div class="gh-container">
+        <div class="other-page-heading">
+            <h1>Contact Us</h1>
+            <p>We're excited to meet you!</p>
+        </div>
+        <div class="contact-container">
+            <img
+                class="contact-image"
+                src="{{asset '/images/beaver.webp'}}"
+                alt="Image of the beaver character in the game The Rabbit Haul"
+            />
+        </div>
+
+        <form
+            class="gh-form-container"
+            action="https://formspree.io/f/meqbwppb"
+            method="POST"
+        >
+
+            <input
+                class="gh-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            />
+
+            <textarea
+                placeholder="Message"
+                cols="30"
+                rows="10"
+                class="gh-textarea"
+                name="message"
+                style="resize:none;"
+                required
+            ></textarea>
+            <button
+                id="contact_button"
+                class="send-button gh-button-primary gh-button gh-button-large"
+                type="submit"
+            >Send</button>
+        </form>
+
+    </div>
+</div>
