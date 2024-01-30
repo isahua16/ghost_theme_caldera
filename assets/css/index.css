@@ -371,31 +371,8 @@ html,
     justify-self: start;
 }
 
-.gh-form-container {
-    margin: 50px auto;
-    color:inherit;
-    display:grid;
-    width:100%;
-    gap:24px;
-    max-width: 800px;
-    justify-self: center;
-}
-
-.text_input {
-    font-size: inherit;
-    padding: 12px 12px;
-    border-radius: var(--radius);
-    line-height: 24px;
-    border: 1px solid var(--color-border);
-    resize: none;
-}
-
-.send-button {
-    width: fit-content;
-}
-
 .other-page-heading {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .contact-container {
@@ -414,27 +391,94 @@ html,
     justify-self: center;
 }
 
-.subscribe-container {
-    margin: 50px 0;
+.page-header {
+    min-height: 400px;
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url(../images/banner.webp);
+    background-position: 50% 50%;
+    background-size: 2560px;
+}
+
+.page-header-container {
+    color:#ffffff;
+    display: grid;
+    margin-top: 135px;
+    gap:50px;
+    justify-items: center;
+    place-items: center;
+    padding: 0 24px;
+}
+
+.page-header-title {
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    align-self: end;
+}
+
+.page-header-subtitle {
+    text-align: center;
+    color:#bababa;
+    letter-spacing: 1.4px;
+    font-weight: 800;
+}
+
+.page-header-playtest-date {
+    color: var(--color-primary);
+}
+
+.subscribe-section {
+    margin: 60px 0;
     display:grid;
-    place-items:center;
-    gap:30px;
+    gap: 60px;
+}
+
+.subscribe-widget-container {
+    display:grid;
+    row-gap: 20px;
+    max-width: 800px;
+}
+
+.perks-section {
+    display:grid;
+    row-gap:15px;
+}
+
+.perks-list-header {
+    font-weight: 400;
+}
+.perks-list {
+    display: grid;
+    row-gap:10px;
+    align-items: center;
+}
+
+.subscribe-widget-subheader {
+    display: grid;
 }
 
 .subscribe-image {
-    max-width: 200px;
-    width:50%;  
-    justify-self: center;
+    order:1;
+    max-width: 500px;
+    min-width: 200px;
+    width: 100%;
+    place-self: center;
 }
 
-.subscribe-text {
-    font-size: 3rem;
+.subscribe-email-input {
+    margin: 20px 0;
+    width: 100%;
 }
 
 .blog-image {
     max-width: 200px;
     width:50%;
     justify-self: center;
+}
+
+.blue-bar {
+    width:100%;
+    min-height: 2vh;
+    background-color: var(--color-primary);;
 }
 
 @media (min-width: 640px) {
@@ -446,7 +490,32 @@ html,
     }
 }
 
+@media (min-width: 910px) {
+
+    .subscribe-widget-container {
+    margin-left: none;
+}
+
+    .subscribe-section {
+        grid-template-columns: 0.9fr 1.1fr;
+        max-width: auto;
+        justify-self: auto;
+    }    
+
+    .subscribe-image {
+        order:-1;
+    }
+}
+
 @media (min-width: 900px) {
+
+    .page-header-title {
+        font-size: 6rem;
+    }
+
+    .page-header-subtitle {
+        font-size: 3rem;
+    }
 
     .grid-container {
     grid-template-columns: 1fr 1fr;
