@@ -316,9 +316,9 @@ html,
 }
 
 /* Make sign up button on home page take the full width of the container (Stylistic choice */
-/* #signup-button {
+#signup-button {
     width: 100%;
-} */
+}
 
 .spacer-container {
     margin: 6vmin 0;
