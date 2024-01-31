@@ -2,7 +2,7 @@
 {{#if @member}}
 <div class="welcome-page-header">
     <div class="welcome-page-header-container">
-        <h1 class="welcome-page-header-title"> WELCOME! 👋</h1>
+        <h1 class="welcome-page-header-title"> WELCOME!</h1>
         <h3 class="welcome-page-header-subtitle">Thanks for signing up</h3>
     </div>
 </div>
@@ -15,9 +15,9 @@
                     now have access to:
                 </h4>
                 <ul class="welcome-page-membership-section-list">
-                    <li>👉 Monthly email updates about our latest projects</li>
-                    <li>👉 Invitations to alpha and beta tests of our games</li>
-                    <li>👉 Our community Discord — access below 👇 </li>
+                    <li>Monthly email updates about our latest projects</li>
+                    <li>Invitations to alpha and beta tests of our games</li>
+                    <li>Our community Discord — access below 👇 </li>
                 </ul>
             </div>
 
@@ -26,11 +26,11 @@
                     Playtests
                 </h4>
                 <ul class="welcome-page-playtest-section-list">
-                    <li>👉 Our next playtest is on
+                    <li>Our next playtest is on
                         <strong>February 9-11, 2024.</strong></li>
-                    <li>👉 By joining our discord, you may be chosen as one of
+                    <li>By joining our discord, you may be chosen as one of
                         the first 100 people to playtest our game!</li>
-                    <li>👉 Even if you’re not chosen this month, we will be
+                    <li>Even if you’re not chosen this month, we will be
                         continuing these tests regularly, and you will be
                         helping shape The Rabbit Haul in its final production.</li>
                 </ul>
@@ -38,8 +38,9 @@
 
             <div class="welcome-page-discord-section-container">
                 <a href="https://discord.gg/SbDnUZsdJj" target="_blank"><img
+                        class="welcome-page-discord-section-button-image"
                         src="{{asset 'images/discord.webp'}}"
-                        alt=""
+                        alt="Click button to join Discord"
                     /></a>
                 <p class="welcome-page-discord-section-text">By signing up, you
                     agree to our
@@ -61,21 +62,24 @@
 <div class="gh-page">
     <div class="gh-container">
         <div class="subscribe-page-signup-section" >
-            <img class="subscribe-page-signup-image" src="{{asset "images/panda.webp"}}" alt="">
+            <img class="subscribe-page-signup-image" src="{{asset "images/panda.webp"}}" alt="Image of a panda warrior from the game">
             <div class="subscribe-page-signup-form-container">
                 <div class="subscribe-page-signup-form-title">
                     <h1>Become a Playtester</h1>
+                    <p class="subscribe-page-signup-form-subtitle">Signing up has its perks ! 🎉</p>
                 </div>
-                <p class="subscribe-page-signup-form-subtitle">Signing up has its perks ! 🎉</p>
-                <div class="subscribe-page-signup-form-perks-perks-section">
-                    <p>🎮 Be the first to play our games</p>
-                    <p>🤩 Access an amazing, inclusive community</p>
-                    <p>✅ Vote on new features</p>
-                    <p>💬 Chat with the devs</p>
-                    <p>📣 Receive monthly newsletters</p>
+                <ul class="subscribe-page-signup-form-perks-section">
+                    <li>Be the first to play our games</li>
+                    <li>Access an amazing, inclusive community</li>
+                    <li>Vote on new features</li>
+                    <li>Chat with the devs</li>
+                    <li>Receive monthly newsletters</li>
+                </ul>
+                <div class="subscribe-page-signup-form-email-container">
+                    <div class="subscribe-page-signup-form-email-input"><script src="/signup-form.min.js" data-button-color="#00b8f1" data-button-text-color="#FFFFFF" data-site="https://calderainteractive.com/" async></script>
+                    </div>
+                    <p class="subscribe-page-signup-form-email-disclaimer">By signing up, you agree to our <a href="https://docs.google.com/document/d/e/2PACX-1vR5S-t8pvE7FVnwCqL-Kcnosvdz8KbVBMAlM5NsGr45sEwJjfJIYrFrPlRErDRP_4PpprdofhL9V_v3/pub" target="_blank">terms</a>.</p>
                 </div>
-                <div class="subscribe-page-signup-form-email-input"><script src="/signup-form.min.js" data-button-color="#00b8f1" data-button-text-color="#FFFFFF" data-site="https://calderainteractive.com/" async></script></div>
-                <p>By signing up, you agree to our <a href="https://docs.google.com/document/d/e/2PACX-1vR5S-t8pvE7FVnwCqL-Kcnosvdz8KbVBMAlM5NsGr45sEwJjfJIYrFrPlRErDRP_4PpprdofhL9V_v3/pub" target="_blank">terms</a>.</p>
             </div>
     </div>
 {{/if}}

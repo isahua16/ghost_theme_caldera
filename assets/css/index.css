@@ -467,6 +467,7 @@ html,
     margin: 60px 0;
     display:grid;
     gap: 60px;
+    align-items: center;
 }
 
 .subscribe-page-signup-image {
@@ -478,28 +479,28 @@ html,
 }
 
 .subscribe-page-signup-form-container {
+    width: 100%;
+    max-width: 700px;
     display:grid;
-    row-gap: 20px;
-    max-width: 800px;
-}
-
-.subscribe-page-signup-form-title {
-    display: grid;
-}
-
-.subscribe-page-signup-form-subtitle {
-    font-weight: 400;
-}
-
-.subscribe-page-signup-form-perks-perks-section {
-    display: grid;
-    row-gap:10px;
     align-items: center;
+    grid-template-rows: 100px 200px 120px;
+    justify-self: center;
+}
+
+.subscribe-page-signup-form-perks-section {
+    display: grid;
+    font-size: 1.7rem;
+    list-style-type: disc;
+    row-gap: 5px;
+    align-items: start;
+    margin-left: 20px;
 }
 
 .subscribe-page-signup-form-email-input {
-    margin: 20px 0;
     width: 100%;
+}
+.subscribe-page-signup-form-email-disclaimer {
+    margin-top: 10px;
 }
 
 /* Welcome Page Styles */
@@ -545,10 +546,9 @@ html,
 
 .welcome-page-membership-section-list {
     font-size: 1.7rem;
-    list-style:none;
     display: grid;
     gap: 15px;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 .welcome-page-playtest-section-container {
@@ -558,10 +558,9 @@ html,
 
 .welcome-page-playtest-section-list {
     font-size: 1.7rem;
-    list-style:none;
     display: grid;
     gap: 15px;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 .welcome-page-discord-section-container {
@@ -620,17 +619,19 @@ html,
 }
 
 }
-@media (min-width: 910px) {
+@media (min-width: 973px) {
 
-    .subscribe-page-signup-form-container {
-    margin-left: none;
-}
 
     .subscribe-page-signup-section {
         grid-template-columns: 0.9fr 1.1fr;
         max-width: auto;
         justify-self: auto;
     }    
+
+    .subscribe-page-signup-form-container {
+        max-width: 800px;
+
+}
 
     .subscribe-page-signup-image {
         order:-1;
