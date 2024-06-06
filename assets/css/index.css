@@ -315,7 +315,7 @@ html,
     place-items: center;
 }
 
-/* Make sign up button on home page take the full width of the container (Stylistic choice */
+/* Make sign up button on home page take the full width of the container (Stylistic choice) */
 #signup-button {
     width: 100%;
 }
@@ -385,6 +385,7 @@ html,
     justify-self: start;
 }
 
+/* Subheader titles for all secondary pages */
 .other-page-heading {
     margin-top: 60px;
 }
@@ -414,6 +415,7 @@ html,
 .send-button {
     width:fit-content;
 }
+
 /* Blog page */
 
 .blog-container {
@@ -575,6 +577,81 @@ html,
     font-size: 1.5rem;
 }
 
+/* About Us Page Styles */
+
+.about-page-headings {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.about-story-section-container {
+    display: grid;
+    row-gap: 40px; 
+}
+
+.about-text {
+    font-size: 1.7rem;
+    line-height: 3.1rem;
+}
+
+.about-name-section-container {
+    display: grid;
+    row-gap: 40px; 
+}
+
+.about-mvv-section-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+}
+
+.about-mvv-article-container {
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: 50px 1fr;
+}
+
+.left-mvv-articles {
+    max-width: 500px;
+}
+
+.about-value-text {
+    font-size: 1.7rem;
+    line-height: 3.1rem;
+}
+
+#caldera-badge {
+    width: 300px;
+    justify-self: center;
+}
+
+#values-article{
+    justify-self: center;
+}
+
+.about-team-section-container {
+    display: grid;
+    place-items: center;
+    gap:60px;
+    margin-bottom: 80px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-team-article-container {
+    display:grid;
+    gap:20px;
+    max-width: 400px;
+
+}
+
+.team-photos {
+    justify-self: center;
+
+}
+
+
 @media (min-width: 640px) {
     .gh-team-container {
         grid-template-columns: 1fr 1fr 1fr;
@@ -582,6 +659,26 @@ html,
     .gh-team-card-name{
         font-size: 2rem;
     }
+}
+
+@media (max-width: 700px) {
+
+    .about-mvv-section-container {
+    grid-template-columns: 1fr;
+}
+
+#values-article{
+    justify-self: start;
+}
+
+#caldera-badge {
+    order:-1;
+}
+
+.about-team-section-container {
+    grid-template-columns: 1fr;
+}
+
 }
 
 @media (min-width: 900px) {
@@ -642,5 +739,15 @@ html,
     .gh-team-card-name{
         font-size: 3.2rem;
 }
+
 }
 
+@media (min-width: 1300px) {
+
+    .about-story-section-container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+
+}
+
+}
