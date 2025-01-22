@@ -26,7 +26,7 @@
 .gh-foot-menu .nav {
     display: grid;
     flex-wrap: wrap;
-    place-items:center;
+    place-items: center;
     list-style: none;
     font-size: 1.8rem;
     gap: 2rem;
@@ -46,11 +46,10 @@
 
 .gh-foot-socials {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 5rem 1.5vmin;
     place-items: center;
 }
-
 
 .gh-foot-meta {
     margin: 5rem 0;
@@ -60,9 +59,8 @@
 }
 
 .social_icon {
-    width:35px;
-    height:35px;
-
+    width: 35px;
+    height: 35px;
 }
 
 @media (max-width: 700px) {
