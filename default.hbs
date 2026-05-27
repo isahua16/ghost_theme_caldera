@@ -1,14 +1,28 @@
 <html lang="{{@site.locale}}">
     <head>
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="04505020-4694-4a29-8013-01d39e8a17be"  type="text/javascript"></script>
-        <script type="text/plain"
-        data-cookieconsent="marketing" async  src="https://www.googletagmanager.com/gtag/js?id=G-EPJGY7Z30R"></script>
-        <script type="text/plain"
-            data-cookieconsent="marketing"> 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EPJGY7Z30R');
+        <script data-cookieconsent="ignore">
+            window.dataLayer = window.dataLayer || []; function gtag() {
+            dataLayer.push(arguments); } gtag("consent", "default", {
+            ad_personalization: "denied", ad_storage: "denied", ad_user_data:
+            "denied", analytics_storage: "denied", functionality_storage:
+            "denied", personalization_storage: "denied", security_storage:
+            "granted", wait_for_update: 500 }); gtag("set",
+            "ads_data_redaction", true); gtag("set", "url_passthrough", false);
+        </script>
+
+        <script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="04505020-4694-4a29-8013-01d39e8a17be"
+            data-blockingmode="auto"
+            type="text/javascript"
+        ></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-EPJGY7Z30R"
+        ></script>
+        <script>
+            gtag("js", new Date()); gtag("config", "G-EPJGY7Z30R");
         </script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,9 +39,7 @@
         />
         {{ghost_head}}
         {{! Outputs important meta data and settings, should always be in <head> }}
-        
 
-        </div>
     </head>
     <body class="{{body_class}}">
         <div class="gh-viewport">
@@ -56,7 +68,7 @@
                         {{navigation}}
                     </div>
                 </nav>
-                
+
             </header>
             <div class="blue-bar"></div>
 
@@ -91,10 +103,7 @@
                                 alt="X Logo"
                             />
                         </a>
-                        <a
-                            target="_blank"
-                            href="https://discord.gg/UVDt2ScaDJ"
-                        >
+                        <a target="_blank" href="https://discord.gg/UVDt2ScaDJ">
                             <img
                                 class="social_icon"
                                 src="{{asset 'images/discord.svg'}}"
@@ -114,7 +123,10 @@
                     </div>
                     <div class="gh-foot-meta">
                         <p>&copy 2026 Caldera Interactive Ltd.</p>
-                        <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vTbgMg9kFnandFj3FJm35lpCwNkZ4W22pk7kx0kvw3GNk6Bnrsc53sh-KDzGfKjJA/pub">Privacy</a>
+                        <a
+                            target="_blank"
+                            href="https://docs.google.com/document/d/e/2PACX-1vTbgMg9kFnandFj3FJm35lpCwNkZ4W22pk7kx0kvw3GNk6Bnrsc53sh-KDzGfKjJA/pub"
+                        >Privacy</a>
                     </div>
                 </div>
             </footer>
