@@ -42,6 +42,22 @@
 
 .gh-head-logo img {
     max-height: 70px;
+    transform: translateY(0) scale(1);
+    transform-origin: left center;
+    transition:
+        filter 180ms ease,
+        transform 180ms ease;
+}
+
+.gh-head-logo:hover img,
+.gh-head-logo:focus-visible img {
+    filter: saturate(1.15);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.gh-head-logo:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 6px;
 }
 
 
@@ -67,12 +83,40 @@
 }
 
 .gh-head-menu .nav a {
+    position: relative;
     display: inline-block;
     padding: 5px 0;
+    transition: color 180ms ease;
+}
+
+.gh-head-menu .nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 2px;
+    content: "";
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 180ms ease;
+}
+
+.gh-head-menu .nav a:hover::after,
+.gh-head-menu .nav a:focus-visible::after,
+.gh-head-menu .nav-current a::after {
+    transform: scaleX(1);
 }
 
 .gh-head-menu .nav-current a {
-    box-shadow: 0 -1px 0 0 currentcolor inset;
+    color: var(--color-primary);
+}
+
+.gh-head-menu .nav a:focus-visible,
+.gh-burger:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 6px;
 }
 
 

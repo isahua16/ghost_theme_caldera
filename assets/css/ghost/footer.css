@@ -38,10 +38,45 @@
 }
 
 .gh-foot-menu .nav a {
+    position: relative;
     display: inline-block;
     padding: 3px 0;
     text-decoration: none;
-    box-shadow: 0 -1px 0 0 currentcolor inset;
+    transition: color 180ms ease;
+}
+
+.gh-foot-menu .nav a::after,
+.gh-foot-meta a::after,
+.cookie-settings-button::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    content: "";
+    background: currentColor;
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition: transform 180ms ease;
+}
+
+.gh-foot-menu .nav a:hover,
+.gh-foot-menu .nav a:focus-visible,
+.gh-foot-meta a:hover,
+.gh-foot-meta a:focus-visible,
+.cookie-settings-button:hover,
+.cookie-settings-button:focus-visible {
+    color: var(--color-primary);
+}
+
+.gh-foot-menu .nav a:hover::after,
+.gh-foot-menu .nav a:focus-visible::after,
+.gh-foot-meta a:hover::after,
+.gh-foot-meta a:focus-visible::after,
+.cookie-settings-button:hover::after,
+.cookie-settings-button:focus-visible::after {
+    transform: scaleX(0.45);
 }
 
 .gh-foot-socials {
@@ -58,9 +93,49 @@
     opacity: 0.75;
 }
 
+.gh-foot-meta a,
+.cookie-settings-button {
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 3px 0;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
 .social_icon {
     width: 35px;
     height: 35px;
+    transform: translateY(0) scale(1);
+    transition:
+        filter 180ms ease,
+        opacity 180ms ease,
+        transform 180ms ease;
+}
+
+.gh-foot-socials a {
+    display: inline-flex;
+    padding: 8px;
+    border-radius: var(--radius);
+}
+
+.gh-foot-socials a:hover .social_icon,
+.gh-foot-socials a:focus-visible .social_icon {
+    opacity: 0.82;
+    filter: saturate(1.2);
+    transform: translateY(-3px) scale(1.08);
+}
+
+.gh-foot-socials a:active .social_icon {
+    transform: translateY(0) scale(1);
+}
+
+.gh-foot-socials a:focus-visible,
+.gh-foot-menu .nav a:focus-visible,
+.gh-foot-meta a:focus-visible,
+.cookie-settings-button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 5px;
 }
 
 @media (max-width: 700px) {
