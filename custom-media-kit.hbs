@@ -1,0 +1,106 @@
+{{!< default}}
+
+<main class="media-kit-page">
+    <section class="media-kit-hero">
+        <div class="media-kit-hero__media">
+            <img
+                src="{{asset 'images/hero.webp'}}"
+                alt="Key art for The Rabbit Haul"
+            />
+        </div>
+
+        <div class="media-kit-hero__content">
+            <p class="media-kit-eyebrow">Presskit</p>
+            <h1>The Rabbit Haul</h1>
+            <p class="media-kit-intro">
+                A roguelite farming and tower defense game about growing crops,
+                building defenses, and protecting your haul from the Trash
+                Panda Posse.
+            </p>
+
+            <div class="media-kit-actions">
+                <a
+                    class="gh-button gh-button-large gh-button-primary media-kit-action"
+                    href="https://drive.google.com/drive/folders/1aRosUyaRh-V3TSKx_1ylxmYssMgrZbLT?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    {{> "icons/download"}}
+                    Download Asset Pack
+                </a>
+                <a
+                    class="gh-button gh-button-large media-kit-action"
+                    href="/contact"
+                >
+                    {{> "icons/mail"}}
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="media-kit-section media-kit-facts" aria-labelledby="media-kit-facts-title">
+        <div class="media-kit-section__header">
+            <h2 id="media-kit-facts-title">Quick Facts</h2>
+            <p>Everything press and creators usually need first.</p>
+        </div>
+
+        <dl class="media-kit-facts__list">
+            <div class="media-kit-fact">
+                <dt>Developer</dt>
+                <dd>Caldera Interactive</dd>
+            </div>
+            <div class="media-kit-fact">
+                <dt>Location</dt>
+                <dd>Edmonton, Canada</dd>
+            </div>
+            <div class="media-kit-fact">
+                <dt>Platforms</dt>
+                <dd>PC, Nintendo Switch</dd>
+            </div>
+            <div class="media-kit-fact">
+                <dt>Release</dt>
+                <dd>Summer 2026 for PC (Switch later)</dd>
+            </div>
+            <div class="media-kit-fact">
+                <dt>Where to Buy</dt>
+                <dd>
+                    <a
+                        href="https://store.steampowered.com/app/4439600/The_Rabbit_Haul_Demo/"
+                        target="_blank"
+                        rel="noopener"
+                    >Steam</a>
+                    <span>Nintendo eShop</span>
+                    <span>Fanatical</span>
+                    <span>Xsolla</span>
+                </dd>
+            </div>
+            <div class="media-kit-fact">
+                <dt>Genre</dt>
+                <dd>Farming tower defense</dd>
+            </div>
+        </dl>
+    </section>
+
+    <section class="media-kit-section media-kit-about" aria-labelledby="media-kit-about-title">
+        <div class="media-kit-section__header">
+            <h2 id="media-kit-about-title">About the Game</h2>
+        </div>
+        <p>
+            Play as Sprout, a determined rabbit rebuilding their hometown one
+            run at a time. Farm by day, defend by night, unlock new upgrades,
+            and find clever plant synergies to keep your harvest safe.
+        </p>
+    </section>
+
+    <section class="media-kit-section media-kit-contact" aria-labelledby="media-kit-contact-title">
+        <div class="media-kit-section__header">
+            <h2 id="media-kit-contact-title">Press Contact</h2>
+            <p>For interviews, press copies, and other media requests.</p>
+        </div>
+        <a class="media-kit-contact__link" href="mailto:mike@untitledadlab.com">
+            {{> "icons/mail"}}
+            mike@untitledadlab.com
+        </a>
+    </section>
+</main>
