@@ -29,8 +29,10 @@ async function getNextPage(url) {
 }
 
 export default function infiniteScroll() {
-    
-    if (!link) { return; }
+    const postFeed = document.querySelector('.gh-postfeed');
+    const lastPost = document.querySelector('.post:last-of-type');
+
+    if (!link || !postFeed || !lastPost) { return; }
 
     const options = {
         // When the last card is within a 150px of the viewport, fetch the next page. This provides a smoother transition between pages 
@@ -46,7 +48,7 @@ export default function infiniteScroll() {
                     if (link) {
                         getNextPage(link).then(({posts, nextLink}) => {
                             posts.forEach(post => {
-                                document.querySelector('.gh-postfeed').append(post)
+                                postFeed.append(post)
                             })
 
                             if (nextLink) {
@@ -66,6 +68,6 @@ export default function infiniteScroll() {
 
     let observer = new IntersectionObserver(callback, options);
 
-    observer.observe(document.querySelector('.post:last-of-type'))
+    observer.observe(lastPost)
 
 }
