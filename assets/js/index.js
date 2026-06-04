@@ -6,10 +6,12 @@ import "../css/index.css";
 // Import JS
 import menuOpen from "./menuOpen";
 import infiniteScroll from "./infiniteScroll";
+import cookieConsent from "./cookieConsent";
 
 // Call the menu and infinite scroll functions
 menuOpen();
 infiniteScroll();
+cookieConsent();
 
 window.onbeforeunload = () => {
     for (const form of document.getElementsByTagName("form")) {
