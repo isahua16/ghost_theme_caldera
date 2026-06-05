@@ -74,8 +74,7 @@
                     <p class="welcome-page-discord-section-text">By signing up,
                         you agree to our
                         <a
-                            href="https://docs.google.com/document/d/e/2PACX-1vR5S-t8pvE7FVnwCqL-Kcnosvdz8KbVBMAlM5NsGr45sEwJjfJIYrFrPlRErDRP_4PpprdofhL9V_v3/pub"
-                            target="_blank"
+                            href="/terms"
                         >terms</a>.</p>
                 </div>
             </div>
@@ -117,19 +116,47 @@
                     <div class="subscribe-page-signup-form-email-container">
                         <div
                             class="subscribe-page-signup-form-email-input"
-                        ><script
-                                src="/signup-form.min.js"
-                                data-button-color="#00b8f1"
-                                data-button-text-color="#FFFFFF"
-                                data-site="https://calderainteractive.com/"
-                                async
-                            ></script>
+                        >
+                            <form
+                                class="subscribe-page-signup-form"
+                                data-members-form="signup"
+                            >
+                                <div class="gh-auth-box">
+                                    <input
+                                        class="gh-input"
+                                        data-members-email
+                                        type="email"
+                                        required="true"
+                                        autocomplete="email"
+                                        placeholder="you@example.com"
+                                        aria-label="Email address"
+                                    />
+                                    <button
+                                        class="gh-button gh-button-primary"
+                                        type="submit"
+                                    >
+                                        <span
+                                            class="gh-button-content"
+                                        >Subscribe</span>
+                                        <span class="gh-button-loader">
+                                            {{> "icons/loader"}}
+                                        </span>
+                                    </button>
+                                </div>
+                                <p class="message-success">
+                                    Great! Check your inbox and click the link
+                                    to confirm your signup.
+                                </p>
+                                <p
+                                    class="message-error"
+                                    data-members-error
+                                ></p>
+                            </form>
                         <p
                             class="subscribe-page-signup-form-email-disclaimer"
                         >By signing up, you agree to our
                             <a
-                                href="https://docs.google.com/document/d/e/2PACX-1vR5S-t8pvE7FVnwCqL-Kcnosvdz8KbVBMAlM5NsGr45sEwJjfJIYrFrPlRErDRP_4PpprdofhL9V_v3/pub"
-                                target="_blank"
+                                href="/terms"
                             >terms</a>.</p>
                     </div>
                 </div>

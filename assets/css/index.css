@@ -832,8 +832,8 @@ a.home-hero-store:focus-visible {
     width: 100%;
     max-width: 700px;
     display: grid;
+    gap: 24px;
     align-items: center;
-    grid-template-rows: 100px 200px 120px;
     justify-self: center;
 }
 
@@ -853,8 +853,30 @@ a.home-hero-store:focus-visible {
 .subscribe-page-signup-form-email-input {
     width: 100%;
 }
+
+.subscribe-page-signup-form {
+    display: grid;
+    gap: 12px;
+    justify-items: start;
+    max-width: 500px;
+}
+
+.subscribe-page-signup-form .gh-auth-box {
+    gap: 0;
+    max-width: none;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.subscribe-page-signup-form .gh-input {
+    flex: 1 1 auto;
+    background: #ffffff;
+}
+
 .subscribe-page-signup-form-email-disclaimer {
     margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
 }
 
 /* Welcome Page Styles */
@@ -926,6 +948,25 @@ a.home-hero-store:focus-visible {
     place-items: center;
     text-align: center;
     gap: 10px;
+}
+
+.welcome-page-discord-section-container a {
+    transform: translateY(0) scale(1);
+    transition: transform 180ms ease;
+}
+
+.welcome-page-discord-section-container a:hover,
+.welcome-page-discord-section-container a:focus-visible {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.welcome-page-discord-section-container a:active {
+    transform: translateY(0) scale(1);
+}
+
+.welcome-page-discord-section-container a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 5px;
 }
 
 .welcome-page-discord-section-text {
