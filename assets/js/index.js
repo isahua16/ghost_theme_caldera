@@ -7,11 +7,13 @@ import "../css/index.css";
 import menuOpen from "./menuOpen";
 import infiniteScroll from "./infiniteScroll";
 import cookieConsent from "./cookieConsent";
+import homeHeroDropdown from "./homeHeroDropdown";
 
 // Call the menu and infinite scroll functions
 menuOpen();
 infiniteScroll();
 cookieConsent();
+homeHeroDropdown();
 
 window.onbeforeunload = () => {
     for (const form of document.getElementsByTagName("form")) {

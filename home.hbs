@@ -1,6 +1,42 @@
 {{!< default}}
 
-<img class="gh-fullscreen-image" src="{{asset "/images/hero.webp"}}" alt="Concept art for the game The Rabbit Haul">
+<section class="home-hero" aria-label="The Rabbit Haul availability">
+    <img class="gh-fullscreen-image" src="{{asset "/images/hero.webp"}}" alt="Concept art for the game The Rabbit Haul">
+
+    <div class="home-hero-panel">
+        <div class="home-hero-release">
+            <button
+                class="home-hero-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="home-hero-stores"
+            >
+                <span class="home-hero-release__date">Coming 2026</span>
+                <span class="home-hero-toggle__icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div id="home-hero-stores" class="home-hero-stores" aria-label="Available storefronts">
+            <a
+                class="home-hero-store home-hero-store--steam"
+                href="https://store.steampowered.com/app/4439600/The_Rabbit_Haul_Demo/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Steam"
+            >
+                {{> "icons/steam"}}
+            </a>
+
+            <span class="home-hero-store home-hero-store--fanatical" role="img" aria-label="Fanatical">
+                {{> "icons/fanatical"}}
+            </span>
+
+            <span class="home-hero-store home-hero-store--switch" role="img" aria-label="Nintendo Switch coming later">
+                {{> "icons/switch"}}
+            </span>
+        </div>
+    </div>
+</section>
 
 <div class="gh-page">
     <div class="section gh-container">

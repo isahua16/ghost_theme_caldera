@@ -16,7 +16,7 @@
 .gh-head-inner {
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
     grid-auto-flow: row dense;
 }
 
@@ -68,10 +68,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex-wrap: nowrap;
 }
 
 .gh-head-menu .nav {
-    display: inline-flex;
+    display: contents;
     flex-wrap: wrap;
     align-items: center;
     list-style: none;
@@ -86,6 +87,7 @@
     position: relative;
     display: inline-block;
     padding: 5px 0;
+    white-space: nowrap;
     transition: color 180ms ease;
 }
 
@@ -117,6 +119,49 @@
 .gh-burger:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 6px;
+}
+
+.gh-head-wishlist {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-height: 38px;
+    margin: 0 0 0 1.5vmin;
+    padding: 0 16px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius);
+    background: rgba(0, 184, 241, 0.08);
+    box-shadow: 0 8px 18px rgba(0, 184, 241, 0.14);
+    color: #007aa3;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: nowrap;
+    transition:
+        background-color 180ms ease,
+        box-shadow 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.gh-head-wishlist:hover,
+.gh-head-wishlist:focus-visible {
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 184, 241, 0.22);
+    transform: translateY(-2px);
+}
+
+.gh-head-wishlist:active {
+    transform: translateY(0);
+}
+
+.gh-head-wishlist:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
 }
 
 
@@ -329,6 +374,11 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    #gh-head .gh-head-wishlist {
+        margin: 18px 0 0;
+        padding: 12px 22px;
+        font-size: 2rem;
     }
     #gh-head .gh-head-actions {
         padding: 20px 0;
