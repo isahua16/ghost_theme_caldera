@@ -2,42 +2,107 @@
 /* ---------------------------------------------------------- */
 
 .gh-foot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 70px 4vmin 4vmin;
-    background-color: var(--color-bg-dark);
+    padding: 64px 4vmin 32px;
+    border-top: 4px solid var(--color-primary);
+    background:
+        linear-gradient(180deg, rgba(0, 184, 241, 0.08), rgba(247, 248, 249, 0.95)),
+        var(--color-bg-dark);
 }
 
 .gh-foot .gh-container {
-    width: auto;
+    width: 100%;
 }
 
 .gh-foot a {
     color: inherit;
 }
 
-.gh-foot-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gh-foot-menu .nav {
+.gh-foot-main {
     display: grid;
-    flex-wrap: wrap;
-    place-items: center;
-    list-style: none;
-    font-size: 1.8rem;
-    gap: 2rem;
+    grid-template-columns: minmax(260px, 1.1fr) minmax(180px, 0.7fr) minmax(180px, 0.7fr);
+    gap: 42px;
+    align-items: start;
 }
 
-.gh-foot-menu .nav li {
-    margin: 0 1.5vmin;
+.gh-foot-brand {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+.gh-foot-logo {
+    width: min(100%, 230px);
+    max-height: 70px;
+    object-fit: contain;
+    object-position: left center;
+    transform: translateY(0) scale(1);
+    transform-origin: left center;
+    transition:
+        filter 180ms ease,
+        transform 180ms ease;
+}
+
+.gh-foot-logo-link {
+    display: inline-block;
+}
+
+.gh-foot-logo-link:hover .gh-foot-logo,
+.gh-foot-logo-link:focus-visible .gh-foot-logo {
+    filter: saturate(1.15);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.gh-foot-logo-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 6px;
+}
+
+.gh-foot-title {
+    color: var(--color-primary);
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.1em;
+}
+
+.gh-foot-brand p {
+    max-width: 28rem;
+    color: rgba(70, 70, 70, 0.78);
+    font-size: 1.5rem;
+    line-height: 1.55em;
+}
+
+.gh-foot-menu,
+.gh-foot-legal {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.gh-foot-heading {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+
+.gh-foot-menu .nav,
+.gh-foot-link-list {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    font-size: 1.7rem;
+}
+
+.gh-foot-menu .nav li,
+.gh-foot-link-list li {
+    margin: 0;
     padding: 0;
 }
 
-.gh-foot-menu .nav a {
+.gh-foot-menu .nav a,
+.gh-foot-link-list a {
     position: relative;
     display: inline-block;
     padding: 3px 0;
@@ -46,7 +111,7 @@
 }
 
 .gh-foot-menu .nav a::after,
-.gh-foot-meta a::after,
+.gh-foot-link-list a::after,
 .cookie-settings-button::after {
     position: absolute;
     right: 0;
@@ -63,8 +128,8 @@
 
 .gh-foot-menu .nav a:hover,
 .gh-foot-menu .nav a:focus-visible,
-.gh-foot-meta a:hover,
-.gh-foot-meta a:focus-visible,
+.gh-foot-link-list a:hover,
+.gh-foot-link-list a:focus-visible,
 .cookie-settings-button:hover,
 .cookie-settings-button:focus-visible {
     color: var(--color-primary);
@@ -72,40 +137,51 @@
 
 .gh-foot-menu .nav a:hover::after,
 .gh-foot-menu .nav a:focus-visible::after,
-.gh-foot-meta a:hover::after,
-.gh-foot-meta a:focus-visible::after,
+.gh-foot-link-list a:hover::after,
+.gh-foot-link-list a:focus-visible::after,
 .cookie-settings-button:hover::after,
 .cookie-settings-button:focus-visible::after {
     transform: scaleX(0.45);
 }
 
 .gh-foot-socials {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 5rem 1.5vmin;
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .gh-foot-meta {
-    margin: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 42px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 184, 241, 0.18);
     font-size: 1.5rem;
     text-align: center;
     opacity: 0.75;
 }
 
-.gh-foot-meta a,
+.gh-foot-meta p {
+    flex-basis: 100%;
+}
+
 .cookie-settings-button {
     position: relative;
     display: inline-block;
-    margin: 0 8px;
+    margin: 0;
     padding: 3px 0;
     text-decoration: none;
     transition: color 180ms ease;
 }
 
 .social_icon {
-    width: 35px;
-    height: 35px;
+    width: 26px;
+    height: 26px;
     transform: translateY(0) scale(1);
     transition:
         filter 180ms ease,
@@ -115,7 +191,7 @@
 
 .gh-foot-socials a {
     display: inline-flex;
-    padding: 8px;
+    padding: 6px;
     border-radius: var(--radius);
 }
 
@@ -132,14 +208,38 @@
 
 .gh-foot-socials a:focus-visible,
 .gh-foot-menu .nav a:focus-visible,
-.gh-foot-meta a:focus-visible,
+.gh-foot-link-list a:focus-visible,
 .cookie-settings-button:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 5px;
 }
 
-@media (max-width: 700px) {
-    .gh-foot-menu .nav {
+@media (max-width: 900px) {
+    .gh-foot-main {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .gh-foot-brand,
+    .gh-foot-menu,
+    .gh-foot-legal {
+        justify-items: center;
+    }
+
+    .gh-foot-logo {
+        object-position: center;
+        transform-origin: center;
+    }
+
+    .gh-foot-socials {
+        justify-content: center;
+    }
+
+    .gh-foot-menu .nav,
+    .gh-foot-link-list {
         font-size: 1.6rem;
+        justify-items: center;
     }
 }

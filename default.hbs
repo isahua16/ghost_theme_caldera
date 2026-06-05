@@ -65,56 +65,122 @@
 
             <footer class="gh-foot">
                 <div class="gh-container">
-                    <div class="gh-foot-menu">
-                        {{navigation type="secondary"}}
+                    <div class="gh-foot-main">
+                        <div class="gh-foot-brand">
+                            {{#if @site.logo}}
+                                <a
+                                    class="gh-foot-logo-link"
+                                    href="{{@site.url}}"
+                                    aria-label="{{@site.title}} home"
+                                >
+                                    <img
+                                        class="gh-foot-logo"
+                                        src="{{@site.logo}}"
+                                        alt="{{@site.title}}"
+                                    />
+                                </a>
+                            {{else}}
+                                <p class="gh-foot-title">{{@site.title}}</p>
+                            {{/if}}
+                            <p>Wholesome games from Edmonton.</p>
+                            <div class="gh-foot-socials">
+                                <a
+                                    target="_blank"
+                                    href="https://bsky.app/profile/calderainteractive.bsky.social"
+                                ><img
+                                        class="social_icon"
+                                        src="{{asset 'images/bluesky.svg'}}"
+                                        alt="Bluesky logo"
+                                    /></a>
+                                <a
+                                    target="_blank"
+                                    href="https://twitter.com/CalderaInteract"
+                                >
+                                    <img
+                                        class="social_icon"
+                                        src="{{asset 'images/twitter.svg'}}"
+                                        alt="X Logo"
+                                    />
+                                </a>
+                                <a
+                                    target="_blank"
+                                    href="https://discord.gg/UVDt2ScaDJ"
+                                >
+                                    <img
+                                        class="social_icon"
+                                        src="{{asset 'images/discord.svg'}}"
+                                        alt="Discord logo"
+                                    />
+                                </a>
+                                <a
+                                    target="_blank"
+                                    href="https://www.youtube.com/@calderainteractive"
+                                >
+                                    <img
+                                        class="social_icon"
+                                        src="{{asset 'images/youtube.svg'}}"
+                                        alt="Youtube logo"
+                                    />
+                                </a>
+                                <a
+                                    target="_blank"
+                                    href="https://store.steampowered.com/app/2514330/The_Rabbit_Haul/"
+                                >
+                                    <img
+                                        class="social_icon"
+                                        src="{{asset 'images/steam.svg'}}"
+                                        alt="Steam logo"
+                                    />
+                                </a>
+                                <a
+                                    target="_blank"
+                                    href="https://www.instagram.com/calderainteractive/"
+                                >
+                                    <img
+                                        class="social_icon"
+                                        src="{{asset 'images/instagram.svg'}}"
+                                        alt="Instagram logo"
+                                    />
+                                </a>
+                                <a
+                                    target="_blank"
+                                    href="https://www.tiktok.com/@rabbithaulgame"
+                                >
+                                    <img
+                                        class="social_icon"
+                                        src="{{asset 'images/tiktok.svg'}}"
+                                        alt="TikTok logo"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gh-foot-menu">
+                            <p class="gh-foot-heading">Explore</p>
+                            {{navigation type="secondary"}}
+                        </div>
+
+                        <div class="gh-foot-legal">
+                            <p class="gh-foot-heading">Legal</p>
+                            <nav aria-label="Legal links">
+                                <ul class="gh-foot-link-list">
+                                    <li><a href="/privacy">Privacy</a></li>
+                                    <li><a href="/terms">Terms</a></li>
+                                    <li><a href="/eula">EULA</a></li>
+                                    <li>
+                                        <button
+                                            class="cookie-settings-button"
+                                            type="button"
+                                            data-cookie-settings
+                                        >Cookie Settings</button>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="gh-foot-socials">
-                        <a
-                            target="_blank"
-                            href="https://bsky.app/profile/calderainteractive.bsky.social"
-                        ><img
-                                class="social_icon"
-                                src="{{asset 'images/bluesky.svg'}}"
-                                alt="Bluesky logo"
-                            /></a>
-                        <a
-                            target="_blank"
-                            href="https://twitter.com/CalderaInteract"
-                        >
-                            <img
-                                class="social_icon"
-                                src="{{asset 'images/twitter.svg'}}"
-                                alt="X Logo"
-                            />
-                        </a>
-                        <a target="_blank" href="https://discord.gg/UVDt2ScaDJ">
-                            <img
-                                class="social_icon"
-                                src="{{asset 'images/discord.svg'}}"
-                                alt="Discord logo"
-                            />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="https://www.youtube.com/@calderainteractive"
-                        >
-                            <img
-                                class="social_icon"
-                                src="{{asset 'images/youtube.svg'}}"
-                                alt="Youtube logo"
-                            />
-                        </a>
-                    </div>
+
                     <div class="gh-foot-meta">
-                        <p>&copy 2026 Caldera Interactive Ltd.</p>
-                        <a href="/privacy">Privacy</a>
-                        <a href="/terms">Terms</a>
-                        <a href="/eula">EULA</a>
-                        <button
-                            class="cookie-settings-button"
-                            type="button"
-                            data-cookie-settings
-                        >Cookie Settings</button>
+                        <p>&copy {{year}} Caldera Interactive Ltd.</p>
                     </div>
                 </div>
             </footer>
