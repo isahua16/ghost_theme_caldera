@@ -13,7 +13,9 @@
     --color-error: #f05230;
 
     /* Fonts */
-    --font-sans-serif: "Inter", sans-serif;
+    --gh-font-heading: "Inter", sans-serif;
+    --gh-font-body: "Inter", sans-serif;
+    --font-sans-serif: var(--gh-font-body);
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --font-light: 100;
