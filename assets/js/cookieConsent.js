@@ -1,16 +1,63 @@
 const ANALYTICS_ID = 'G-EPJGY7Z30R';
 const CONSENT_COOKIE = 'caldera_cookie_consent';
 const CONSENT_MAX_AGE = 60 * 60 * 24 * 180;
+const ANALYTICS_COOKIE_PREFIXES = ['_ga', '_gid', '_gat', '_gac', '_gcl'];
 
 function getCookie(name) {
-    return document.cookie
+    const value = document.cookie
         .split('; ')
         .find(cookie => cookie.startsWith(`${name}=`))
         ?.split('=')[1];
+
+    return value ? decodeURIComponent(value) : value;
+}
+
+function getCookieDomainCandidates() {
+    const hostname = window.location.hostname;
+
+    if (hostname === 'localhost' || /^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
+        return [];
+    }
+
+    return hostname
+        .split('.')
+        .map((_, index, parts) => parts.slice(index).join('.'))
+        .filter(domain => domain.includes('.'))
+        .flatMap(domain => [domain, `.${domain}`]);
+}
+
+function writeCookie(name, value, maxAge, domain) {
+    const encodedName = encodeURIComponent(name);
+    const encodedValue = encodeURIComponent(value);
+    const domainAttribute = domain ? `; Domain=${domain}` : '';
+
+    document.cookie = `${encodedName}=${encodedValue}; Max-Age=${maxAge}; Path=/; SameSite=Lax${domainAttribute}`;
+}
+
+function deleteCookie(name, domain) {
+    const encodedName = encodeURIComponent(name);
+    const domainAttribute = domain ? `; Domain=${domain}` : '';
+
+    document.cookie = `${encodedName}=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Path=/; SameSite=Lax${domainAttribute}`;
+}
+
+function deleteCookieEverywhere(name) {
+    deleteCookie(name);
+    getCookieDomainCandidates().forEach(domain => deleteCookie(name, domain));
 }
 
 function setConsentCookie(value) {
-    document.cookie = `${CONSENT_COOKIE}=${value}; Max-Age=${CONSENT_MAX_AGE}; Path=/; SameSite=Lax`;
+    deleteCookieEverywhere(CONSENT_COOKIE);
+    writeCookie(CONSENT_COOKIE, value, CONSENT_MAX_AGE);
+}
+
+function deleteAnalyticsCookies() {
+    const cookieNames = document.cookie
+        .split('; ')
+        .map(cookie => cookie.split('=')[0])
+        .filter(name => ANALYTICS_COOKIE_PREFIXES.some(prefix => name === prefix || name.startsWith(`${prefix}_`)));
+
+    cookieNames.forEach(deleteCookieEverywhere);
 }
 
 function setupGtagDefaults() {
@@ -33,7 +80,12 @@ function setupGtagDefaults() {
 }
 
 function loadAnalytics() {
+    window[`ga-disable-${ANALYTICS_ID}`] = false;
+
     if (document.getElementById('ga-script')) {
+        window.gtag('consent', 'update', {
+            analytics_storage: 'granted',
+        });
         return;
     }
 
@@ -51,9 +103,11 @@ function loadAnalytics() {
 }
 
 function disableAnalytics() {
+    window[`ga-disable-${ANALYTICS_ID}`] = true;
     window.gtag('consent', 'update', {
         analytics_storage: 'denied',
     });
+    deleteAnalyticsCookies();
 }
 
 function createBanner() {

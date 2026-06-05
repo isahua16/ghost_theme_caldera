@@ -1,10 +1,9 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
-    "demo": "https://starter.ghost.io",
+    "name": "caldera-interactive-theme",
+    "description": "Custom Ghost theme for Caldera Interactive",
     "version": "2.0.1",
     "engines": {
-        "ghost": ">=5.0.0"
+        "ghost": ">=6.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -18,9 +17,7 @@
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Caldera Interactive"
     },
     "gpm": {
         "type": "theme",
@@ -34,12 +31,6 @@
         "theme",
         "ghost-theme"
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
-    },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
         "@babel/core": "^7.21.0",
         "@babel/preset-env": "^7.20.2",

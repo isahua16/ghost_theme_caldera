@@ -172,13 +172,13 @@ html,
 .gh-card-content > strong {
     display: inline-block;
     padding: 1px 0;
+    border-bottom: 1px solid currentColor;
     font-weight: 500;
-    box-shadow: 0 -1px 0 0 inset currentColor;
     opacity: 0.75;
     color: var(--color-primary);
     transform: translateX(0);
     transition:
-        box-shadow 180ms ease,
+        border-color 180ms ease,
         opacity 180ms ease,
         transform 180ms ease;
 }
@@ -186,7 +186,7 @@ html,
 .gh-card:hover .gh-card-content > strong,
 .gh-card:focus-within .gh-card-content > strong {
     opacity: 1;
-    box-shadow: 0 -2px 0 0 inset currentColor;
+    border-bottom-width: 2px;
     transform: translateX(4px);
 }
 
