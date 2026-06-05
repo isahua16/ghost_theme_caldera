@@ -17,7 +17,8 @@
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Caldera Interactive"
+        "name": "Caldera Interactive",
+        "email": "hello@calderainteractive.com"
     },
     "gpm": {
         "type": "theme",
