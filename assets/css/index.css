@@ -426,14 +426,11 @@ html,
 }
 
 a.home-hero-store {
-    transition:
-        color 180ms ease,
-        transform 180ms ease;
+    transition: transform 180ms ease;
 }
 
 a.home-hero-store:hover,
 a.home-hero-store:focus-visible {
-    color: #76ef66;
     transform: translateY(-2px);
 }
 
